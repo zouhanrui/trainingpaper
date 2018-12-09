@@ -1,0 +1,242 @@
+dnnlib: Running train.train() on localhost...
+Skipping file datasets/Set14/image_SRF_2/desktop.ini due to error:  cannot identify image file 'datasets/Set14/image_SRF_2/desktop.ini'
+Setting up dataset source from datasets/bsd300.tfrecords
+
+autoencoder                 Params      OutputShape             WeightShape             
+---                         ---         ---                     ---                     
+x                           -           (?, 3, 256, 256)        -                       
+enc_conv0                   1344        (?, 48, 256, 256)       (3, 3, 3, 48)           
+enc_conv1                   20784       (?, 48, 256, 256)       (3, 3, 48, 48)          
+MaxPool                     -           (?, 48, 128, 128)       -                       
+enc_conv2                   20784       (?, 48, 128, 128)       (3, 3, 48, 48)          
+MaxPool_1                   -           (?, 48, 64, 64)         -                       
+enc_conv3                   20784       (?, 48, 64, 64)         (3, 3, 48, 48)          
+MaxPool_2                   -           (?, 48, 32, 32)         -                       
+enc_conv4                   20784       (?, 48, 32, 32)         (3, 3, 48, 48)          
+MaxPool_3                   -           (?, 48, 16, 16)         -                       
+enc_conv5                   20784       (?, 48, 16, 16)         (3, 3, 48, 48)          
+MaxPool_4                   -           (?, 48, 8, 8)           -                       
+enc_conv6                   20784       (?, 48, 8, 8)           (3, 3, 48, 48)          
+Upscale2D                   -           (?, 48, 16, 16)         -                       
+dec_conv5                   83040       (?, 96, 16, 16)         (3, 3, 96, 96)          
+dec_conv5b                  83040       (?, 96, 16, 16)         (3, 3, 96, 96)          
+Upscale2D_1                 -           (?, 96, 32, 32)         -                       
+dec_conv4                   124512      (?, 96, 32, 32)         (3, 3, 144, 96)         
+dec_conv4b                  83040       (?, 96, 32, 32)         (3, 3, 96, 96)          
+Upscale2D_2                 -           (?, 96, 64, 64)         -                       
+dec_conv3                   124512      (?, 96, 64, 64)         (3, 3, 144, 96)         
+dec_conv3b                  83040       (?, 96, 64, 64)         (3, 3, 96, 96)          
+Upscale2D_3                 -           (?, 96, 128, 128)       -                       
+dec_conv2                   124512      (?, 96, 128, 128)       (3, 3, 144, 96)         
+dec_conv2b                  83040       (?, 96, 128, 128)       (3, 3, 96, 96)          
+Upscale2D_4                 -           (?, 96, 256, 256)       -                       
+dec_conv1a                  57088       (?, 64, 256, 256)       (3, 3, 99, 64)          
+dec_conv1b                  18464       (?, 32, 256, 256)       (3, 3, 64, 32)          
+dec_conv1                   867         (?, 3, 256, 256)        (3, 3, 32, 3)           
+---                         ---         ---                     ---                     
+Total                       991203                                                      
+
+Building TensorFlow graph...
+Training...
+Average PSNR: 8.89
+iter 0          time 3s           sec/eval 0.0     sec/iter 0.00    maintenance 3.2   
+Average PSNR: 26.28
+iter 500        time 1m 52s       sec/eval 60.0    sec/iter 0.12    maintenance 49.1  
+Average PSNR: 27.28
+iter 1000       time 3m 13s       sec/eval 58.5    sec/iter 0.12    maintenance 22.3  
+Average PSNR: 28.19
+iter 1500       time 4m 35s       sec/eval 58.7    sec/iter 0.12    maintenance 23.4  
+Average PSNR: 28.18
+iter 2000       time 5m 58s       sec/eval 58.7    sec/iter 0.12    maintenance 23.7  
+Average PSNR: 27.77
+iter 2500       time 7m 21s       sec/eval 58.7    sec/iter 0.12    maintenance 25.0  
+Average PSNR: 28.33
+iter 3000       time 8m 45s       sec/eval 58.3    sec/iter 0.12    maintenance 25.0  
+Average PSNR: 27.83
+iter 3500       time 10m 09s      sec/eval 58.0    sec/iter 0.12    maintenance 25.9  
+Average PSNR: 28.94
+iter 4000       time 11m 31s      sec/eval 58.4    sec/iter 0.12    maintenance 24.2  
+Average PSNR: 28.07
+iter 4500       time 12m 56s      sec/eval 58.2    sec/iter 0.12    maintenance 26.2  
+Average PSNR: 28.84
+iter 5000       time 14m 20s      sec/eval 58.5    sec/iter 0.12    maintenance 26.4  
+Average PSNR: 29.19
+iter 5500       time 15m 46s      sec/eval 58.4    sec/iter 0.12    maintenance 27.3  
+Average PSNR: 29.27
+iter 6000       time 17m 14s      sec/eval 58.6    sec/iter 0.12    maintenance 29.3  
+Average PSNR: 29.18
+iter 6500       time 18m 41s      sec/eval 58.7    sec/iter 0.12    maintenance 28.3  
+Average PSNR: 29.37
+iter 7000       time 20m 08s      sec/eval 58.1    sec/iter 0.12    maintenance 28.7  
+Average PSNR: 29.17
+iter 7500       time 21m 36s      sec/eval 58.6    sec/iter 0.12    maintenance 29.3  
+Average PSNR: 29.42
+iter 8000       time 23m 05s      sec/eval 58.5    sec/iter 0.12    maintenance 30.7  
+Average PSNR: 29.34
+iter 8500       time 24m 34s      sec/eval 58.6    sec/iter 0.12    maintenance 30.5  
+Average PSNR: 29.56
+iter 9000       time 26m 02s      sec/eval 58.1    sec/iter 0.12    maintenance 29.9  
+Average PSNR: 29.07
+iter 9500       time 27m 30s      sec/eval 58.9    sec/iter 0.12    maintenance 28.9  
+Average PSNR: 29.66
+iter 10000      time 28m 58s      sec/eval 58.9    sec/iter 0.12    maintenance 29.2  
+Average PSNR: 29.56
+iter 10500      time 30m 25s      sec/eval 58.2    sec/iter 0.12    maintenance 28.6  
+Average PSNR: 29.89
+iter 11000      time 31m 52s      sec/eval 58.5    sec/iter 0.12    maintenance 28.4  
+Average PSNR: 29.51
+iter 11500      time 33m 21s      sec/eval 58.4    sec/iter 0.12    maintenance 31.0  
+Average PSNR: 29.57
+iter 12000      time 34m 50s      sec/eval 58.2    sec/iter 0.12    maintenance 30.8  
+Average PSNR: 29.25
+iter 12500      time 36m 17s      sec/eval 58.4    sec/iter 0.12    maintenance 29.0  
+Average PSNR: 29.91
+iter 13000      time 37m 46s      sec/eval 58.7    sec/iter 0.12    maintenance 29.9  
+Average PSNR: 29.81
+iter 13500      time 39m 15s      sec/eval 59.2    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 29.66
+iter 14000      time 40m 43s      sec/eval 58.3    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 29.86
+iter 14500      time 42m 11s      sec/eval 58.0    sec/iter 0.12    maintenance 30.3  
+Average PSNR: 30.13
+iter 15000      time 43m 40s      sec/eval 58.3    sec/iter 0.12    maintenance 31.1  
+Average PSNR: 30.02
+iter 15500      time 45m 09s      sec/eval 58.4    sec/iter 0.12    maintenance 30.6  
+Average PSNR: 30.06
+iter 16000      time 46m 37s      sec/eval 58.2    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 29.93
+iter 16500      time 48m 06s      sec/eval 58.5    sec/iter 0.12    maintenance 30.5  
+Average PSNR: 30.27
+iter 17000      time 49m 34s      sec/eval 58.3    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.18
+iter 17500      time 51m 02s      sec/eval 58.3    sec/iter 0.12    maintenance 29.4  
+Average PSNR: 30.18
+iter 18000      time 52m 31s      sec/eval 58.5    sec/iter 0.12    maintenance 30.4  
+Average PSNR: 29.94
+iter 18500      time 54m 01s      sec/eval 58.6    sec/iter 0.12    maintenance 31.0  
+Average PSNR: 30.10
+iter 19000      time 55m 30s      sec/eval 58.1    sec/iter 0.12    maintenance 30.9  
+Average PSNR: 30.24
+iter 19500      time 56m 58s      sec/eval 58.3    sec/iter 0.12    maintenance 30.1  
+Average PSNR: 30.36
+iter 20000      time 58m 26s      sec/eval 58.9    sec/iter 0.12    maintenance 29.4  
+Average PSNR: 29.98
+iter 20500      time 59m 54s      sec/eval 58.3    sec/iter 0.12    maintenance 29.9  
+Average PSNR: 30.35
+iter 21000      time 1h 01m 23s   sec/eval 58.4    sec/iter 0.12    maintenance 30.7  
+Average PSNR: 30.13
+iter 21500      time 1h 02m 52s   sec/eval 58.3    sec/iter 0.12    maintenance 30.3  
+Average PSNR: 30.10
+iter 22000      time 1h 04m 22s   sec/eval 58.6    sec/iter 0.12    maintenance 31.1  
+Average PSNR: 28.89
+iter 22500      time 1h 05m 50s   sec/eval 58.3    sec/iter 0.12    maintenance 30.3  
+Average PSNR: 30.24
+iter 23000      time 1h 07m 20s   sec/eval 58.2    sec/iter 0.12    maintenance 31.6  
+Average PSNR: 29.99
+iter 23500      time 1h 08m 49s   sec/eval 59.0    sec/iter 0.12    maintenance 29.9  
+Average PSNR: 30.24
+iter 24000      time 1h 10m 17s   sec/eval 58.4    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.25
+iter 24500      time 1h 11m 45s   sec/eval 58.3    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 29.59
+iter 25000      time 1h 13m 14s   sec/eval 58.3    sec/iter 0.12    maintenance 30.3  
+Average PSNR: 30.25
+iter 25500      time 1h 14m 43s   sec/eval 58.4    sec/iter 0.12    maintenance 30.9  
+Average PSNR: 30.39
+iter 26000      time 1h 16m 11s   sec/eval 58.4    sec/iter 0.12    maintenance 30.2  
+Average PSNR: 30.50
+iter 26500      time 1h 17m 39s   sec/eval 58.2    sec/iter 0.12    maintenance 29.3  
+Average PSNR: 30.48
+iter 27000      time 1h 19m 08s   sec/eval 59.1    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.52
+iter 27500      time 1h 20m 37s   sec/eval 58.6    sec/iter 0.12    maintenance 30.3  
+Average PSNR: 30.03
+iter 28000      time 1h 22m 05s   sec/eval 58.2    sec/iter 0.12    maintenance 30.1  
+Average PSNR: 30.57
+iter 28500      time 1h 23m 34s   sec/eval 58.5    sec/iter 0.12    maintenance 30.4  
+Average PSNR: 30.50
+iter 29000      time 1h 25m 03s   sec/eval 58.4    sec/iter 0.12    maintenance 31.2  
+Average PSNR: 30.42
+iter 29500      time 1h 26m 32s   sec/eval 58.4    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.42
+iter 30000      time 1h 27m 59s   sec/eval 57.6    sec/iter 0.12    maintenance 29.3  
+Average PSNR: 30.58
+iter 30500      time 1h 29m 27s   sec/eval 58.8    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.25
+iter 31000      time 1h 30m 56s   sec/eval 58.1    sec/iter 0.12    maintenance 30.5  
+Average PSNR: 30.58
+iter 31500      time 1h 32m 24s   sec/eval 58.1    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.56
+iter 32000      time 1h 33m 52s   sec/eval 58.5    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.65
+iter 32500      time 1h 35m 21s   sec/eval 58.6    sec/iter 0.12    maintenance 31.0  
+Average PSNR: 30.58
+iter 33000      time 1h 36m 49s   sec/eval 58.1    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.53
+iter 33500      time 1h 38m 17s   sec/eval 58.3    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.62
+iter 34000      time 1h 39m 46s   sec/eval 59.2    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.59
+iter 34500      time 1h 41m 15s   sec/eval 58.3    sec/iter 0.12    maintenance 30.5  
+Average PSNR: 30.55
+iter 35000      time 1h 42m 43s   sec/eval 58.2    sec/iter 0.12    maintenance 29.9  
+Average PSNR: 30.70
+iter 35500      time 1h 44m 10s   sec/eval 57.8    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 30.74
+iter 36000      time 1h 45m 40s   sec/eval 58.8    sec/iter 0.12    maintenance 31.1  
+Average PSNR: 30.64
+iter 36500      time 1h 47m 08s   sec/eval 58.5    sec/iter 0.12    maintenance 29.4  
+Average PSNR: 30.74
+iter 37000      time 1h 48m 36s   sec/eval 58.2    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.73
+iter 37500      time 1h 50m 04s   sec/eval 58.7    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.77
+iter 38000      time 1h 51m 33s   sec/eval 58.6    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.77
+iter 38500      time 1h 53m 01s   sec/eval 58.4    sec/iter 0.12    maintenance 29.7  
+Average PSNR: 30.78
+iter 39000      time 1h 54m 29s   sec/eval 58.5    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 30.78
+iter 39500      time 1h 55m 58s   sec/eval 58.4    sec/iter 0.12    maintenance 30.8  
+Average PSNR: 30.79
+iter 40000      time 1h 57m 26s   sec/eval 58.4    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 30.78
+iter 40500      time 1h 58m 54s   sec/eval 58.5    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.80
+iter 41000      time 2h 00m 23s   sec/eval 58.9    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.79
+iter 41500      time 2h 01m 50s   sec/eval 58.0    sec/iter 0.12    maintenance 29.4  
+Average PSNR: 30.81
+iter 42000      time 2h 03m 18s   sec/eval 58.4    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 30.79
+iter 42500      time 2h 04m 46s   sec/eval 58.2    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 30.82
+iter 43000      time 2h 06m 16s   sec/eval 58.8    sec/iter 0.12    maintenance 31.0  
+Average PSNR: 30.81
+iter 43500      time 2h 07m 44s   sec/eval 58.2    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.81
+iter 44000      time 2h 09m 12s   sec/eval 58.4    sec/iter 0.12    maintenance 29.9  
+Average PSNR: 30.82
+iter 44500      time 2h 10m 40s   sec/eval 59.1    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.82
+iter 45000      time 2h 12m 08s   sec/eval 58.3    sec/iter 0.12    maintenance 29.4  
+Average PSNR: 30.82
+iter 45500      time 2h 13m 36s   sec/eval 58.2    sec/iter 0.12    maintenance 29.3  
+Average PSNR: 30.82
+iter 46000      time 2h 15m 04s   sec/eval 58.2    sec/iter 0.12    maintenance 29.8  
+Average PSNR: 30.82
+iter 46500      time 2h 16m 33s   sec/eval 58.5    sec/iter 0.12    maintenance 30.9  
+Average PSNR: 30.82
+iter 47000      time 2h 18m 01s   sec/eval 58.4    sec/iter 0.12    maintenance 29.3  
+Average PSNR: 30.82
+iter 47500      time 2h 19m 28s   sec/eval 58.1    sec/iter 0.12    maintenance 29.5  
+Average PSNR: 30.83
+iter 48000      time 2h 20m 57s   sec/eval 59.2    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.82
+iter 48500      time 2h 22m 25s   sec/eval 58.3    sec/iter 0.12    maintenance 29.6  
+Average PSNR: 30.82
+iter 49000      time 2h 23m 53s   sec/eval 58.2    sec/iter 0.12    maintenance 29.4  
+Average PSNR: 30.82
+iter 49500      time 2h 25m 20s   sec/eval 58.2    sec/iter 0.12    maintenance 29.5  
+Elapsed time: 2h 26m 50s
+dnnlib: Finished train.train() in 2h 26m 52s.
