@@ -1,0 +1,31 @@
+{   'corruption_types': {   'gaussian': {'func_name': 'train.AugmentGaussian', 'train_stddev_rng_range': (0.0, 50.0), 'validation_stddev': 25.0},
+                            'poisson': {'func_name': 'train.AugmentPoisson', 'lam_max': 50.0}},
+    'datasets': {'bsd300': {'dataset_dir': 'datasets/bsd300'}, 'kodak': {'dataset_dir': 'datasets/kodak'}, 'set14': {'dataset_dir': 'datasets/set14/Set14/image_SRF_2'}},
+    'default_validation_config': {'dataset_dir': 'datasets/set14/Set14/image_SRF_2'},
+    'desc': 'autoencoder',
+    'examples': 'examples:\n'
+                '\n'
+                '  # Train a network using the BSD300 dataset:\n'
+                '  python %(prog)s train --train-tfrecords=datasets/bsd300.tfrecords\n'
+                '\n'
+                '  # Run a set of images through a pre-trained network:\n'
+                '  python %(prog)s validate --network-snapshot=results/network_final.pickle --dataset-dir=datasets/kodak\n',
+    'gaussian_noise_config': {'func_name': 'train.AugmentGaussian', 'train_stddev_rng_range': (0.0, 50.0), 'validation_stddev': 25.0},
+    'net_config': {'func_name': 'network.autoencoder'},
+    'optimizer_config': {'beta1': 0.9, 'beta2': 0.99, 'epsilon': 1e-08},
+    'poisson_noise_config': {'func_name': 'train.AugmentPoisson', 'lam_max': 50.0},
+    'tf_config': {'graph_options.place_pruned_graph': True},
+    'train_config': {   'eval_interval': 1000,
+                        'iteration_count': 300000,
+                        'learning_rate': 0.0003,
+                        'minibatch_size': 4,
+                        'noise': {'func_name': 'train.AugmentGaussian', 'train_stddev_rng_range': (0.0, 50.0), 'validation_stddev': 25.0},
+                        'noise2noise': True,
+                        'ramp_down_perc': 0.3,
+                        'run_func_name': 'train.train',
+                        'train_tfrecords': 'datasets/imagenet_val_raw.tfrecords',
+                        'validation_config': {'dataset_dir': 'datasets/set14/Set14/image_SRF_2'}},
+    'validate_config': {   'dataset': {'dataset_dir': 'datasets/set14/Set14/image_SRF_2'},
+                           'network_snapshot': None,
+                           'noise': {'func_name': 'train.AugmentGaussian', 'train_stddev_rng_range': (0.0, 50.0), 'validation_stddev': 25.0},
+                           'run_func_name': 'validation.validate'}}
